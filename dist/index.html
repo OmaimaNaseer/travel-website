@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALI Travelers — Homepage</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Optional Custom CSS Utilities -->
+  <style>
+    /* Custom scrollbar and minor tweaks if needed */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #10b981;
+      border-radius: 4px;
+    }
+
+    body > *:not(#root) {
+      display: none;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-D2cNLKM9.js"></script>
+</head>
+<body class="min-h-screen bg-white font-sans text-slate-900 antialiased">
+  <div id="root"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="sticky top-0 z-40 border-b border-slate-100 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2">
+        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 text-white">
+          <i data-feather="compass" class="w-5 h-5"></i>
+        </span>
+        <span class="text-lg font-bold text-slate-900">
+          ALI <span class="font-normal text-slate-700">Travelers</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden items-center gap-8 md:flex">
+        <a href="#home" class="text-sm font-medium text-slate-700 transition hover:text-emerald-600">Home</a>
+        <a href="#destinations" class="text-sm font-medium text-slate-700 transition hover:text-emerald-600">Destinations</a>
+        <a href="#tours" class="text-sm font-medium text-slate-700 transition hover:text-emerald-600">Tours</a>
+        <a href="#about" class="text-sm font-medium text-slate-700 transition hover:text-emerald-600">About</a>
+        <a href="#contact" class="text-sm font-medium text-slate-700 transition hover:text-emerald-600">Contact</a>
+      </nav>
+
+      <!-- Desktop Actions -->
+      <div class="hidden items-center gap-4 md:flex">
+        <button class="flex items-center gap-1 rounded-md border border-slate-200 px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50">
+          PKR Rs. <i data-feather="chevron-down" class="w-3.5 h-3.5"></i>
+        </button>
+        <a href="#signin" class="text-sm font-medium text-slate-700 hover:text-emerald-600">Sign In</a>
+        <button class="inline-flex items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 active:bg-emerald-800">
+          Book Now <span aria-hidden="true">&rarr;</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="menu-btn" class="text-slate-700 md:hidden" aria-label="Toggle menu">
+        <div class="space-y-1.5">
+          <span class="block h-0.5 w-6 bg-slate-800"></span>
+          <span class="block h-0.5 w-6 bg-slate-800"></span>
+          <span class="block h-0.5 w-6 bg-slate-800"></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobile-menu" class="hidden border-t border-slate-100 px-4 pb-4 md:hidden">
+      <a href="#home" class="block py-2 text-sm font-medium text-slate-700">Home</a>
+      <a href="#destinations" class="block py-2 text-sm font-medium text-slate-700">Destinations</a>
+      <a href="#tours" class="block py-2 text-sm font-medium text-slate-700">Tours</a>
+      <a href="#about" class="block py-2 text-sm font-medium text-slate-700">About</a>
+      <a href="#contact" class="block py-2 text-sm font-medium text-slate-700">Contact</a>
+      <button class="mt-2 w-full inline-flex items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700">
+        Book Now &rarr;
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="relative overflow-hidden bg-slate-900 text-white">
+    <img src="https://images.unsplash.com/photo-1589182337358-2cb63099350c?q=80&w=1600&auto=format&fit=crop" alt="Snow-capped peaks in Northern Pakistan" class="absolute inset-0 h-full w-full object-cover opacity-40" />
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/60 to-slate-900"></div>
+
+    <div class="relative mx-auto max-w-5xl px-4 pb-20 pt-16 text-center sm:px-6 lg:px-8">
+      <span class="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold tracking-wide text-emerald-700 ring-1 ring-emerald-200">
+        PAKISTAN'S PREMIER TRAVEL PARTNER
+      </span>
+
+      <h1 class="mt-6 text-4xl font-extrabold leading-tight sm:text-6xl">
+        Explore Pakistan<br />
+        <span class="text-emerald-400">Like Never Before</span>
+      </h1>
+
+      <p class="mx-auto mt-5 max-w-2xl text-base text-slate-200 sm:text-lg">
+        From K2 base camps to Mughal heritage cities — expert-guided tours across Pakistan's most breathtaking destinations.
+      </p>
+
+      <!-- Search Box -->
+      <div class="mx-auto mt-10 max-w-3xl rounded-2xl bg-white p-4 text-left shadow-xl sm:p-5">
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-[1.4fr_1fr_1fr_auto]">
+          <label class="block">
+            <span class="mb-1 flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wide text-slate-500">
+              <i data-feather="map-pin" class="w-3 h-3"></i> Destination
+            </span>
+            <input type="text" placeholder="Hunza, Skardu, Lahore..." class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
+          </label>
+          <label class="block">
+            <span class="mb-1 flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wide text-slate-500">Check-in</span>
+            <input type="date" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
+          </label>
+          <label class="block">
+            <span class="mb-1 flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wide text-slate-500">Check-out</span>
+            <input type="date" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
+          </label>
+          <button class="sm:mt-[22px] inline-flex items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700">
+            <i data-feather="search" class="w-4 h-4"></i> Search Tours
+          </button>
+        </div>
+
+        <div class="mt-4 flex flex-wrap items-center gap-2 border-t border-slate-100 pt-4 text-sm">
+          <span class="text-slate-500">Popular:</span>
+          <button class="rounded-full border border-slate-200 px-3 py-1 text-xs font-medium text-slate-600 transition hover:border-emerald-400 hover:text-emerald-600">Hunza Valley</button>
+          <button class="rounded-full border border-slate-200 px-3 py-1 text-xs font-medium text-slate-600 transition hover:border-emerald-400 hover:text-emerald-600">Skardu</button>
+          <button class="rounded-full border border-slate-200 px-3 py-1 text-xs font-medium text-slate-600 transition hover:border-emerald-400 hover:text-emerald-600">Fairy Meadows</button>
+          <button class="rounded-full border border-slate-200 px-3 py-1 text-xs font-medium text-slate-600 transition hover:border-emerald-400 hover:text-emerald-600">Lahore</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="bg-slate-900 pb-16">
+    <div class="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-4 text-center sm:grid-cols-4 sm:px-6 lg:px-8">
+      <div>
+        <div class="text-3xl font-extrabold text-emerald-400 sm:text-4xl">8,500+</div>
+        <div class="mt-1 text-sm text-slate-300">Happy Travelers</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-emerald-400 sm:text-4xl">25+</div>
+        <div class="mt-1 text-sm text-slate-300">Pakistani Destinations</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-emerald-400 sm:text-4xl">4.9 ★</div>
+        <div class="mt-1 text-sm text-slate-300">Average Rating</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-emerald-400 sm:text-4xl">24/7</div>
+        <div class="mt-1 text-sm text-slate-300">On-Trip Support</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED DESTINATIONS -->
+  <section id="destinations" class="bg-white py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 flex items-end justify-between">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-widest text-emerald-600">Discover Pakistan</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">Featured Destinations</h2>
+        </div>
+        <a href="#all-destinations" class="hidden text-sm font-semibold text-emerald-600 hover:text-emerald-700 sm:flex sm:items-center sm:gap-1">
+          View All <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Hunza -->
+        <div class="group relative h-72 overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.unsplash.com/photo-1587922546307-776227941871?q=80&w=800&auto=format&fit=crop" alt="Hunza Valley" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5 text-white">
+            <div class="mb-2 inline-flex items-center rounded-full bg-emerald-500/90 px-2.5 py-0.5 text-xs font-semibold">34 tours available</div>
+            <h3 class="text-xl font-bold">Hunza Valley</h3>
+            <p class="text-sm text-slate-200">Gilgit-Baltistan</p>
+          </div>
+        </div>
+
+        <!-- Skardu -->
+        <div class="group relative h-72 overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop" alt="Skardu" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5 text-white">
+            <div class="mb-2 inline-flex items-center rounded-full bg-emerald-500/90 px-2.5 py-0.5 text-xs font-semibold">28 tours available</div>
+            <h3 class="text-xl font-bold">Skardu</h3>
+            <p class="text-sm text-slate-200">Gilgit-Baltistan</p>
+          </div>
+        </div>
+
+        <!-- Lahore -->
+        <div class="group relative h-72 overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.unsplash.com/photo-1586183189334-1ea099ac2bdd?q=80&w=800&auto=format&fit=crop" alt="Lahore" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5 text-white">
+            <div class="mb-2 inline-flex items-center rounded-full bg-emerald-500/90 px-2.5 py-0.5 text-xs font-semibold">41 tours available</div>
+            <h3 class="text-xl font-bold">Lahore</h3>
+            <p class="text-sm text-slate-200">Punjab</p>
+          </div>
+        </div>
+
+        <!-- Swat Valley -->
+        <div class="group relative h-72 overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?q=80&w=800&auto=format&fit=crop" alt="Swat Valley" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5 text-white">
+            <div class="mb-2 inline-flex items-center rounded-full bg-emerald-500/90 px-2.5 py-0.5 text-xs font-semibold">22 tours available</div>
+            <h3 class="text-xl font-bold">Swat Valley</h3>
+            <p class="text-sm text-slate-200">Khyber Pakhtunkhwa</p>
+          </div>
+        </div>
+
+        <!-- Fairy Meadows -->
+        <div class="group relative h-72 overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800&auto=format&fit=crop" alt="Fairy Meadows" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5 text-white">
+            <div class="mb-2 inline-flex items-center rounded-full bg-emerald-500/90 px-2.5 py-0.5 text-xs font-semibold">19 tours available</div>
+            <h3 class="text-xl font-bold">Fairy Meadows</h3>
+            <p class="text-sm text-slate-200">Gilgit-Baltistan</p>
+          </div>
+        </div>
+
+        <!-- Mohenjo-daro -->
+        <div class="group relative h-72 overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=800&auto=format&fit=crop" alt="Mohenjo-daro" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5 text-white">
+            <div class="mb-2 inline-flex items-center rounded-full bg-emerald-500/90 px-2.5 py-0.5 text-xs font-semibold">14 tours available</div>
+            <h3 class="text-xl font-bold">Mohenjo-daro</h3>
+            <p class="text-sm text-slate-200">Sindh</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR TOURS -->
+  <section id="tours" class="bg-slate-50 py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 flex items-end justify-between">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-widest text-emerald-600">Curated Experiences</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">Popular Tours</h2>
+        </div>
+        <a href="#all-tours" class="hidden text-sm font-semibold text-emerald-600 hover:text-emerald-700 sm:flex sm:items-center sm:gap-1">
+          Browse All <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Tour 1 -->
+        <div class="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition hover:shadow-md">
+          <div class="relative h-44 w-full">
+            <img src="https://images.unsplash.com/photo-1587922546307-776227941871?q=80&w=800&auto=format&fit=crop" alt="Hunza & Karimabad Explorer" class="h-full w-full object-cover" />
+            <span class="absolute left-3 top-3 rounded-full bg-emerald-500 px-2.5 py-1 text-[11px] font-bold text-white">19% OFF</span>
+            <button aria-label="Save to favorites" class="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 hover:text-rose-500">
+              <i data-feather="heart" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="mb-2 flex flex-wrap gap-1.5">
+              <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600">Mountains</span>
+              <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600">Culture</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900">Hunza & Karimabad Explorer</h3>
+            <p class="mt-1 flex items-center gap-1 text-xs text-slate-500">
+              <i data-feather="map-pin" class="w-3 h-3"></i> Hunza Valley
+              <span class="mx-1">·</span>
+              <i data-feather="calendar" class="w-3 h-3"></i> 7 days
+            </p>
+            <div class="mt-2 flex items-center gap-1 text-xs text-slate-600">
+              <i data-feather="star" class="w-3 h-3 fill-amber-400 text-amber-400"></i>
+              <span class="font-semibold text-slate-800">4.9</span>
+              <span>(412)</span>
+            </div>
+            <div class="mt-3 flex items-end justify-between">
+              <div>
+                <div class="text-xs text-slate-400 line-through">Rs.105,000</div>
+                <div class="text-lg font-extrabold text-slate-900">Rs.85,000</div>
+                <div class="text-[11px] text-slate-500">per person</div>
+              </div>
+            </div>
+            <div class="mt-3 flex gap-2">
+              <button class="flex-1 rounded-lg border border-slate-200 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">Details</button>
+              <button class="flex-1 inline-flex items-center justify-center rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700 book-now-btn" data-tour="hunza-explorer">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 2 -->
+        <div class="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition hover:shadow-md">
+          <div class="relative h-44 w-full">
+            <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop" alt="K2 Base Camp Trek" class="h-full w-full object-cover" />
+            <span class="absolute left-3 top-3 rounded-full bg-slate-900 px-2.5 py-1 text-[11px] font-bold text-white">BESTSELLER</span>
+            <button aria-label="Save to favorites" class="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 hover:text-rose-500">
+              <i data-feather="heart" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="mb-2 flex flex-wrap gap-1.5">
+              <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600">Trekking</span>
+              <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600">Adventure</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900">K2 Base Camp Trek</h3>
+            <p class="mt-1 flex items-center gap-1 text-xs text-slate-500">
+              <i data-feather="map-pin" class="w-3 h-3"></i> Skardu
+              <span class="mx-1">·</span>
+              <i data-feather="calendar" class="w-3 h-3"></i> 14 days
+            </p>
+            <div class="mt-2 flex items-center gap-1 text-xs text-slate-600">
+              <i data-feather="star" class="w-3 h-3 fill-amber-400 text-amber-400"></i>
+              <span class="font-semibold text-slate-800">4.9</span>
+              <span>(187)</span>
+            </div>
+            <div class="mt-3 flex items-end justify-between">
+              <div>
+                <div class="text-lg font-extrabold text-slate-900">Rs.195,000</div>
+                <div class="text-[11px] text-slate-500">per person</div>
+              </div>
+            </div>
+            <div class="mt-3 flex gap-2">
+              <button class="flex-1 rounded-lg border border-slate-200 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">Details</button>
+              <button class="flex-1 inline-flex items-center justify-center rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700 book-now-btn" data-tour="k2-base-camp">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 3 -->
+        <div class="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition hover:shadow-md">
+          <div class="relative h-44 w-full">
+            <img src="https://images.unsplash.com/photo-1586183189334-1ea099ac2bdd?q=80&w=800&auto=format&fit=crop" alt="Lahore Heritage Circuit" class="h-full w-full object-cover" />
+            <button aria-label="Save to favorites" class="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 hover:text-rose-500">
+              <i data-feather="heart" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="mb-2 flex flex-wrap gap-1.5">
+              <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600">Heritage</span>
+              <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600">Food</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900">Lahore Heritage Circuit</h3>
+            <p class="mt-1 flex items-center gap-1 text-xs text-slate-500">
+              <i data-feather="map-pin" class="w-3 h-3"></i> Lahore
+              <span class="mx-1">·</span>
+              <i data-feather="calendar" class="w-3 h-3"></i> 4 days
+            </p>
+            <div class="mt-2 flex items-center gap-1 text-xs text-slate-600">
+              <i data-feather="star" class="w-3 h-3 fill-amber-400 text-amber-400"></i>
+              <span class="font-semibold text-slate-800">4.8</span>
+              <span>(634)</span>
+            </div>
+            <div class="mt-3 flex items-end justify-between">
+              <div>
+                <div class="text-lg font-extrabold text-slate-900">Rs.45,000</div>
+                <div class="text-[11px] text-slate-500">per person</div>
+              </div>
+            </div>
+            <div class="mt-3 flex gap-2">
+              <button class="flex-1 rounded-lg border border-slate-200 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">Details</button>
+              <button class="flex-1 inline-flex items-center justify-center rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700 book-now-btn" data-tour="lahore-heritage">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 4 -->
+        <div class="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition hover:shadow-md">
+          <div class="relative h-44 w-full">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800&auto=format&fit=crop" alt="Fairy Meadows & Nanga Parbat" class="h-full w-full object-cover" />
+            <span class="absolute left-3 top-3 rounded-full bg-emerald-500 px-2.5 py-1 text-[11px] font-bold text-white">20% OFF</span>
+            <button aria-label="Save to favorites" class="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 hover:text-rose-500">
+              <i data-feather="heart" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="mb-2 flex flex-wrap gap-1.5">
+              <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600">Camping</span>
+              <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600">Mountains</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900">Fairy Meadows & Nanga Parbat</h3>
+            <p class="mt-1 flex items-center gap-1 text-xs text-slate-500">
+              <i data-feather="map-pin" class="w-3 h-3"></i> Fairy Meadows
+              <span class="mx-1">·</span>
+              <i data-feather="calendar" class="w-3 h-3"></i> 5 days
+            </p>
+            <div class="mt-2 flex items-center gap-1 text-xs text-slate-600">
+              <i data-feather="star" class="w-3 h-3 fill-amber-400 text-amber-400"></i>
+              <span class="font-semibold text-slate-800">4.8</span>
+              <span>(298)</span>
+            </div>
+            <div class="mt-3 flex items-end justify-between">
+              <div>
+                <div class="text-xs text-slate-400 line-through">Rs.78,000</div>
+                <div class="text-lg font-extrabold text-slate-900">Rs.62,000</div>
+                <div class="text-[11px] text-slate-500">per person</div>
+              </div>
+            </div>
+            <div class="mt-3 flex gap-2">
+              <button class="flex-1 rounded-lg border border-slate-200 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">Details</button>
+              <button class="flex-1 inline-flex items-center justify-center rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700 book-now-btn" data-tour="fairy-meadows">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="about" class="bg-white py-20">
+    <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+      <p class="text-xs font-bold uppercase tracking-widest text-emerald-600">Why Travel With Us</p>
+      <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">The ALI Travelers Difference</h2>
+
+      <div class="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-3">
+        <div class="flex flex-col items-center">
+          <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
+            <i data-feather="users" class="w-6 h-6"></i>
+          </span>
+          <h3 class="mt-5 text-lg font-bold text-slate-900">Local Pakistani Experts</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-500">
+            Born and raised in the regions we explore — our guides bring deep local knowledge, cultural insight, and unmatched safety expertise.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
+            <i data-feather="shield" class="w-6 h-6"></i>
+          </span>
+          <h3 class="mt-5 text-lg font-bold text-slate-900">Best Price Guarantee</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-500">
+            We match any comparable package price, or refund the difference within 48 hours. Transparent pricing, no hidden fees.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
+            <i data-feather="headphones" class="w-6 h-6"></i>
+          </span>
+          <h3 class="mt-5 text-lg font-bold text-slate-900">24/7 On-Trip Support</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-500">
+            A dedicated team reachable around the clock throughout your journey — because mountains do not wait for business hours.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-16 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 border-t border-slate-100 pt-8 text-sm text-slate-600">
+        <span class="flex items-center gap-2"><i data-feather="shield" class="w-4 h-4 text-emerald-600"></i> Secure Payments</span>
+        <span class="flex items-center gap-2"><i data-feather="shield" class="w-4 h-4 text-emerald-600"></i> Verified Operators</span>
+        <span class="flex items-center gap-2"><i data-feather="headphones" class="w-4 h-4 text-emerald-600"></i> Free Cancellation</span>
+        <span class="flex items-center gap-2"><i data-feather="compass" class="w-4 h-4 text-emerald-600"></i> 25+ Destinations</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="bg-slate-900 py-20 text-white">
+    <div class="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
+      <p class="text-xs font-bold uppercase tracking-widest text-emerald-400">Traveler Stories</p>
+      <h2 class="mt-2 text-3xl font-extrabold sm:text-4xl">What Our Guests Say</h2>
+
+      <div class="mt-12 grid grid-cols-1 gap-6 text-left sm:grid-cols-3">
+        <!-- Testimonial 1 -->
+        <div class="rounded-2xl bg-slate-800/60 p-6 ring-1 ring-white/5">
+          <div class="flex gap-0.5 text-amber-400">
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed text-slate-200">
+            “ALI Travelers made our Hunza trip absolutely magical. The guide knew every hidden viewpoint and the homestay family fed us like royalty. Booking Skardu next year!”
+          </p>
+          <div class="mt-5 flex items-center gap-3">
+            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 text-xs font-bold text-white">FA</span>
+            <div>
+              <div class="text-sm font-semibold">Fatima A.</div>
+              <div class="text-xs text-slate-400">Karachi, Pakistan</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="rounded-2xl bg-slate-800/60 p-6 ring-1 ring-white/5">
+          <div class="flex gap-0.5 text-amber-400">
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed text-slate-200">
+            “The K2 Base Camp trek was the hardest and most rewarding thing I have ever done. The team handled every logistics detail so I could just walk and enjoy the views.”
+          </p>
+          <div class="mt-5 flex items-center gap-3">
+            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 text-xs font-bold text-white">OS</span>
+            <div>
+              <div class="text-sm font-semibold">Omar S.</div>
+              <div class="text-xs text-slate-400">Lahore, Pakistan</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="rounded-2xl bg-slate-800/60 p-6 ring-1 ring-white/5">
+          <div class="flex gap-0.5 text-amber-400">
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-feather="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed text-slate-200">
+            “Lahore Heritage Circuit exceeded all expectations. The guide's knowledge of Mughal history was incredible, and the food street evenings were absolutely unforgettable.”
+          </p>
+          <div class="mt-5 flex items-center gap-3">
+            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 text-xs font-bold text-white">ZK</span>
+            <div>
+              <div class="text-sm font-semibold">Zara K.</div>
+              <div class="text-xs text-slate-400">Islamabad, Pakistan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="relative overflow-hidden bg-emerald-700 py-16 text-center text-white">
+    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1600&auto=format&fit=crop" alt="Clouds over Fairy Meadows" class="absolute inset-0 h-full w-full object-cover opacity-25" />
+    <div class="relative mx-auto flex max-w-2xl flex-col items-center gap-4 px-4 sm:flex-row sm:justify-center">
+      <button class="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-emerald-700 shadow hover:bg-emerald-50">
+        Browse All Tours <span aria-hidden="true">&rarr;</span>
+      </button>
+      <button class="inline-flex items-center gap-2 rounded-lg border border-white/70 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">
+        <i data-feather="mail" class="w-4 h-4"></i> Contact Us
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-slate-950 pt-16 text-slate-300">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 pb-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 text-white">
+            <i data-feather="compass" class="w-5 h-5"></i>
+          </span>
+          <span class="text-lg font-bold text-white">
+            ALI <span class="font-normal text-slate-300">Travelers</span>
+          </span>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-slate-400">
+          Pakistan's trusted travel partner — crafting extraordinary journeys since 2018.
+        </p>
+        <div class="mt-4 flex gap-3">
+          <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-slate-300 hover:bg-emerald-600 hover:text-white"><i data-feather="twitter" class="w-3.5 h-3.5"></i></a>
+          <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-slate-300 hover:bg-emerald-600 hover:text-white"><i data-feather="instagram" class="w-3.5 h-3.5"></i></a>
+          <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-slate-300 hover:bg-emerald-600 hover:text-white"><i data-feather="facebook" class="w-3.5 h-3.5"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-400">Explore</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="#" class="text-slate-400 hover:text-white">Home</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">Destinations</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">Tours</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">About</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-400">Pakistan</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="#" class="text-slate-400 hover:text-white">Gilgit-Baltistan</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">Punjab</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">KPK</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">Sindh</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">Balochistan</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-400">Support</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="#" class="text-slate-400 hover:text-white">Help Center</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">Booking FAQ</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">Cancellation Policy</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">Travel Insurance</a></li>
+          <li><a href="#" class="text-slate-400 hover:text-white">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-800">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:px-6 lg:px-8">
+        <p>© 2025 ALI Travelers. All rights reserved. | Registered in Pakistan</p>
+        <div class="flex gap-2">
+          <span class="rounded-md border border-slate-700 px-2.5 py-1 text-[10px] font-semibold">JazzCash</span>
+          <span class="rounded-md border border-slate-700 px-2.5 py-1 text-[10px] font-semibold">EasyPaisa</span>
+          <span class="rounded-md border border-slate-700 px-2.5 py-1 text-[10px] font-semibold">VISA</span>
+          <span class="rounded-md border border-slate-700 px-2.5 py-1 text-[10px] font-semibold">Mastercard</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div id="booking-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+    <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white m-4">
+      <!-- Close Button -->
+      <button id="close-modal" class="absolute right-4 top-4 z-10 text-slate-500 hover:text-slate-700">
+        <i data-feather="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Content -->
+      <div class="p-6">
+        <!-- Tour Header -->
+        <div class="flex gap-4 mb-6">
+          <img id="modal-tour-image" src="" alt="Tour" class="w-32 h-32 rounded-lg object-cover" />
+          <div class="flex-1">
+            <span class="inline-block bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">BOOK TOUR</span>
+            <h2 id="modal-tour-name" class="text-2xl font-bold text-slate-900">Tour Name</h2>
+            <p id="modal-tour-location" class="text-slate-600 mt-1">Location</p>
+            <p id="modal-tour-duration" class="text-slate-600">Duration</p>
+            <p id="modal-tour-price" class="text-lg font-bold text-slate-900 mt-2">Rs.0</p>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex gap-4 border-b border-slate-200 mb-6">
+          <button class="tab-button active px-4 py-3 font-semibold text-slate-700 border-b-2 border-emerald-600" data-tab="details">
+            <span class="flex items-center gap-2"><i data-feather="info" class="w-4 h-4"></i> 1 Details</span>
+          </button>
+          <button class="tab-button px-4 py-3 font-semibold text-slate-700 border-b-2 border-transparent hover:text-emerald-600" data-tab="contact">
+            <span class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i> 2 Contact</span>
+          </button>
+          <button class="tab-button px-4 py-3 font-semibold text-slate-700 border-b-2 border-transparent hover:text-emerald-600" data-tab="payment">
+            <span class="flex items-center gap-2"><i data-feather="credit-card" class="w-4 h-4"></i> 3 Payment</span>
+          </button>
+        </div>
+
+        <!-- Tab Content: Details -->
+        <div class="tab-content active" id="tab-details">
+          <div class="mb-6">
+            <label class="block mb-2">
+              <span class="mb-2 flex items-center gap-1 text-sm font-semibold text-slate-700">
+                <i data-feather="calendar" class="w-4 h-4"></i> DEPARTURE DATE
+              </span>
+              <input type="date" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-slate-800 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
+            </label>
+          </div>
+
+          <div class="mb-6">
+            <label class="block">
+              <span class="mb-2 text-sm font-semibold text-slate-700 flex items-center gap-1">
+                <i data-feather="users" class="w-4 h-4"></i> TRAVELERS
+              </span>
+              <div class="flex items-center gap-3">
+                <button class="traveler-decrease flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 hover:bg-slate-50">-</button>
+                <input type="number" class="traveler-count w-16 text-center border border-slate-200 rounded-lg px-3 py-2" value="2" min="1" />
+                <button class="traveler-increase flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 hover:bg-slate-50">+</button>
+                <span class="text-slate-600">persons</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="font-semibold text-slate-700 mb-3 flex items-center gap-2">
+              <i data-feather="check-circle" class="w-4 h-4 text-emerald-600"></i> INCLUDED
+            </h4>
+            <ul class="space-y-2" id="modal-included-list">
+              <li class="flex items-center gap-2 text-slate-600">
+                <i data-feather="check" class="w-4 h-4 text-emerald-600"></i>
+                <span>Tour details will be shown here</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tab Content: Contact -->
+        <div class="tab-content hidden" id="tab-contact">
+          <div class="space-y-4">
+            <label class="block">
+              <span class="block text-sm font-semibold text-slate-700 mb-2">Full Name</span>
+              <input type="text" placeholder="Your full name" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-slate-800 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
+            </label>
+            <label class="block">
+              <span class="block text-sm font-semibold text-slate-700 mb-2">Email Address</span>
+              <input type="email" placeholder="your.email@example.com" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-slate-800 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
+            </label>
+            <label class="block">
+              <span class="block text-sm font-semibold text-slate-700 mb-2">Phone Number</span>
+              <input type="tel" placeholder="+92 ..." class="w-full rounded-lg border border-slate-200 px-3 py-2 text-slate-800 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
+            </label>
+            <label class="block">
+              <span class="block text-sm font-semibold text-slate-700 mb-2">Special Requests</span>
+              <textarea placeholder="Tell us about any special requests or dietary requirements..." class="w-full rounded-lg border border-slate-200 px-3 py-2 text-slate-800 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" rows="4"></textarea>
+            </label>
+          </div>
+        </div>
+
+        <!-- Tab Content: Payment -->
+        <div class="tab-content hidden" id="tab-payment">
+          <div class="bg-slate-50 p-4 rounded-lg mb-6">
+            <div class="flex justify-between mb-2">
+              <span class="text-slate-600">Tour Price (per person):</span>
+              <span id="payment-price-per-person" class="font-semibold">Rs.0</span>
+            </div>
+            <div class="flex justify-between mb-2">
+              <span class="text-slate-600">Number of Travelers:</span>
+              <span id="payment-travelers" class="font-semibold">2</span>
+            </div>
+            <div class="border-t border-slate-200 pt-2 mt-2 flex justify-between">
+              <span class="font-bold text-slate-900">Total Amount:</span>
+              <span id="payment-total" class="font-bold text-lg text-emerald-600">Rs.0</span>
+            </div>
+          </div>
+
+          <div class="space-y-3 mb-6">
+            <h4 class="font-semibold text-slate-700">Payment Method</h4>
+            <label class="flex items-center gap-3 p-3 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50">
+              <input type="radio" name="payment-method" checked class="w-4 h-4" />
+              <span class="font-medium text-slate-700">JazzCash / EasyPaisa</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50">
+              <input type="radio" name="payment-method" class="w-4 h-4" />
+              <span class="font-medium text-slate-700">Credit/Debit Card</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50">
+              <input type="radio" name="payment-method" class="w-4 h-4" />
+              <span class="font-medium text-slate-700">Bank Transfer</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex gap-3 mt-8 pt-6 border-t border-slate-200">
+          <button id="prev-tab" class="px-6 py-3 rounded-lg border border-slate-200 font-semibold text-slate-700 hover:bg-slate-50">
+            <i data-feather="arrow-left" class="w-4 h-4 inline mr-2"></i> Previous
+          </button>
+          <button id="next-tab" class="flex-1 px-6 py-3 rounded-lg bg-emerald-600 font-semibold text-white hover:bg-emerald-700">
+            Next <i data-feather="arrow-right" class="w-4 h-4 inline ml-2"></i>
+          </button>
+          <button id="submit-booking" class="hidden px-6 py-3 rounded-lg bg-emerald-600 font-semibold text-white hover:bg-emerald-700">
+            <i data-feather="check-circle" class="w-4 h-4 inline mr-2"></i> Continue
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script for Icons & Mobile Navigation toggle -->
+  <script>
+    // Initialize Feather Icons
+    feather.replace();
+
+    // Toggle Mobile Navigation
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Booking Modal Data
+    const toursData = {
+      'hunza-explorer': {
+        name: 'Hunza & Karimabad Explorer',
+        location: 'Hunza Valley',
+        duration: '7 days',
+        price: 85000,
+        image: 'https://images.unsplash.com/photo-1587922546307-776227941871?q=80&w=800&auto=format&fit=crop',
+        included: ['7 nights accommodation', 'Daily guided tours', 'All meals included', 'Airport transfers', 'Travel insurance']
+      },
+      'k2-base-camp': {
+        name: 'K2 Base Camp Trek',
+        location: 'Skardu',
+        duration: '14 days',
+        price: 195000,
+        image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop',
+        included: ['13 nights camping + 1 hotel', 'All meals on trek', 'Porters & pack animals', 'Certified high-altitude guide', 'Emergency oxygen & first aid']
+      },
+      'lahore-heritage': {
+        name: 'Lahore Heritage Circuit',
+        location: 'Lahore',
+        duration: '4 days',
+        price: 45000,
+        image: 'https://images.unsplash.com/photo-1586183189334-1ea099ac2bdd?q=80&w=800&auto=format&fit=crop',
+        included: ['4 nights hotel', 'Daily heritage tours', 'All meals', 'Expert guide', 'Transport included']
+      },
+      'fairy-meadows': {
+        name: 'Fairy Meadows & Nanga Parbat',
+        location: 'Fairy Meadows',
+        duration: '5 days',
+        price: 62000,
+        image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800&auto=format&fit=crop',
+        included: ['5 nights camping', 'All meals on trek', 'Guide & porter', 'Base camp access', 'Photography kit']
+      }
+    };
+
+    // Modal Elements
+    const bookingModal = document.getElementById('booking-modal');
+    const closeModalBtn = document.getElementById('close-modal');
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    const prevTabBtn = document.getElementById('prev-tab');
+    const nextTabBtn = document.getElementById('next-tab');
+    const submitBookingBtn = document.getElementById('submit-booking');
+    let currentTab = 0;
+    let currentTourData = null;
+
+    // Close Modal
+    closeModalBtn.addEventListener('click', () => {
+      bookingModal.classList.add('hidden');
+      currentTab = 0;
+      updateTabUI();
+    });
+
+    bookingModal.addEventListener('click', (e) => {
+      if (e.target === bookingModal) {
+        bookingModal.classList.add('hidden');
+        currentTab = 0;
+        updateTabUI();
+      }
+    });
+
+    // Tab Navigation
+    function updateTabUI() {
+      tabContents.forEach((tab, index) => {
+        tab.classList.toggle('hidden', index !== currentTab);
+      });
+
+      tabButtons.forEach((btn, index) => {
+        btn.classList.toggle('active', index === currentTab);
+        btn.classList.toggle('border-emerald-600', index === currentTab);
+        btn.classList.toggle('border-transparent', index !== currentTab);
+      });
+
+      // Show/hide buttons based on current tab
+      prevTabBtn.classList.toggle('hidden', currentTab === 0);
+      nextTabBtn.classList.toggle('hidden', currentTab === 2);
+      submitBookingBtn.classList.toggle('hidden', currentTab !== 2);
+
+      // Update payment summary
+      if (currentTab === 2) {
+        updatePaymentSummary();
+      }
+    }
+
+    nextTabBtn.addEventListener('click', () => {
+      if (currentTab < 2) {
+        currentTab++;
+        updateTabUI();
+      }
+    });
+
+    prevTabBtn.addEventListener('click', () => {
+      if (currentTab > 0) {
+        currentTab--;
+        updateTabUI();
+      }
+    });
+
+    submitBookingBtn.addEventListener('click', () => {
+      alert('Booking submitted! A confirmation will be sent to your email.');
+      bookingModal.classList.add('hidden');
+      currentTab = 0;
+      updateTabUI();
+    });
+
+    // Open Modal with Tour Data
+    function openBookingModal(tourKey) {
+      currentTourData = toursData[tourKey];
+      if (!currentTourData) return;
+
+      // Populate modal
+      document.getElementById('modal-tour-name').textContent = currentTourData.name;
+      document.getElementById('modal-tour-location').textContent = currentTourData.location;
+      document.getElementById('modal-tour-duration').textContent = currentTourData.duration;
+      document.getElementById('modal-tour-price').textContent = `Rs.${currentTourData.price.toLocaleString()}`;
+      document.getElementById('modal-tour-image').src = currentTourData.image;
+
+      // Populate included list
+      const includedList = document.getElementById('modal-included-list');
+      includedList.innerHTML = currentTourData.included.map(item => `
+        <li class="flex items-center gap-2 text-slate-600">
+          <i data-feather="check" class="w-4 h-4 text-emerald-600"></i>
+          <span>${item}</span>
+        </li>
+      `).join('');
+
+      feather.replace();
+      currentTab = 0;
+      updateTabUI();
+      bookingModal.classList.remove('hidden');
+    }
+
+    function updatePaymentSummary() {
+      const travelers = parseInt(document.querySelector('.traveler-count').value);
+      const totalAmount = currentTourData.price * travelers;
+      
+      document.getElementById('payment-price-per-person').textContent = `Rs.${currentTourData.price.toLocaleString()}`;
+      document.getElementById('payment-travelers').textContent = travelers;
+      document.getElementById('payment-total').textContent = `Rs.${totalAmount.toLocaleString()}`;
+    }
+
+    // Traveler Counter
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('traveler-increase')) {
+        const input = e.target.parentElement.querySelector('.traveler-count');
+        input.value = Math.max(1, parseInt(input.value) + 1);
+      } else if (e.target.classList.contains('traveler-decrease')) {
+        const input = e.target.parentElement.querySelector('.traveler-count');
+        input.value = Math.max(1, parseInt(input.value) - 1);
+      } else if (e.target.classList.contains('book-now-btn')) {
+        const tourKey = e.target.getAttribute('data-tour');
+        if (tourKey) {
+          openBookingModal(tourKey);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
